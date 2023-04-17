@@ -15,7 +15,7 @@ void main() async {
         ),
         home: const Scaffold(
           body: Center(
-            child: Text('Work in Progress'),
+            child: Text('Scaffold'),
           ),
         ),
       ),
