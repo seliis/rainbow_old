@@ -2,6 +2,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:flutter/material.dart';
 
+import 'package:smt/router/index.dart';
+
 void main() async {
   await Hive.initFlutter();
 
@@ -13,11 +15,8 @@ void main() async {
           brightness: Brightness.dark,
           useMaterial3: true,
         ),
-        home: const Scaffold(
-          body: Center(
-            child: Text('Scaffold'),
-          ),
-        ),
+        initialRoute: View.home.name,
+        onGenerateRoute: AppRouter.onGeneratedRoute,
       ),
     ),
   );
