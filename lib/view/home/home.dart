@@ -44,6 +44,10 @@ class HomeView extends StatelessWidget {
               height: 8,
             ),
             makeTextButton('Make Code', () {}),
+            const SizedBox(
+              height: 8,
+            ),
+            makeTextButton('Settings', () {}),
           ],
         ),
       ),
