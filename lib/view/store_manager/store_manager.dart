@@ -1,11 +1,10 @@
-import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 
-import 'package:smt/presenter/index.dart';
-import 'package:smt/common/index.dart';
-
-import 'carry_out.dart';
+import 'recovering_switch.dart';
+import 'control_panel.dart';
+import 'code_scanner.dart';
+import 'carried_list.dart';
 
 class StoreManager extends ConsumerWidget {
   const StoreManager({super.key});
@@ -16,55 +15,19 @@ class StoreManager extends ConsumerWidget {
       appBar: AppBar(
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            SizedBox(
-              width: MediaQuery.of(context).size.width * 0.4225,
-              child: TextFormField(
-                autofocus: true,
-                focusNode: ref.read(StoreManagerControl.focusNodeOfScanField),
-                readOnly: false, // need to turn true in release.
-                showCursor: false,
-                inputFormatters: <TextInputFormatter>[
-                  UpperCaseTextFormatter(),
-                ],
-                onTapOutside: (event) {
-                  FocusScope.of(context).requestFocus(ref.read(StoreManagerControl.focusNodeOfScanField));
-                },
-                onEditingComplete: () {},
-              ),
-            ),
-            Row(
-              children: <Widget>[
-                const Text(
-                  'RECOVERING',
-                  style: TextStyle(
-                    fontWeight: FontWeight.w100,
-                  ),
-                ),
-                const SizedBox(
-                  width: 8,
-                ),
-                Switch(
-                  value: ref.watch(StoreManagerControl.ioMode),
-                  onChanged: (value) {
-                    ref.read(StoreManagerControl.ioMode.notifier).state = value;
-                  },
-                ),
-              ],
-            ),
+          children: const <Widget>[
+            RecoveringSwitch(),
+            CodeScanner(),
           ],
         ),
       ),
       body: SizedBox.expand(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: <Widget>[
-            const CarryOutSubView(),
-            const VerticalDivider(),
-            SizedBox(
-              width: MediaQuery.of(context).size.width * 0.45,
-              child: const Text('Right'),
-            )
+          children: const <Widget>[
+            ControlPanel(),
+            VerticalDivider(),
+            CarriedList(),
           ],
         ),
       ),

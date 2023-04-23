@@ -12,6 +12,7 @@ void main() async {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
+          fontFamily: 'JetBrains Mono',
           brightness: Brightness.dark,
           useMaterial3: true,
         ),

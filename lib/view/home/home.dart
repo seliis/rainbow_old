@@ -21,6 +21,7 @@ class HomeView extends StatelessWidget {
             textStyle: const TextStyle(
               fontSize: 32,
               fontWeight: FontWeight.w100,
+              fontFamily: 'JetBrains Mono',
             ),
           ),
           child: Text(buttonName),
