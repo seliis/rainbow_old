@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:smt/view/index.dart';
+import 'package:rainbow/view/index.dart';
 
 enum View {
   home,

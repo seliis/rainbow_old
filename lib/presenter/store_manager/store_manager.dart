@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
 
-import 'package:smt/entity/index.dart';
+import 'package:rainbow/entity/index.dart';
 
 class StoreManagerControl {
   static const _instance = StoreManagerControl._singleton();

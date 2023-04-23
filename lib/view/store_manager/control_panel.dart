@@ -1,8 +1,8 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 
-import 'package:smt/presenter/index.dart';
-import 'package:smt/entity/index.dart';
+import 'package:rainbow/presenter/index.dart';
+import 'package:rainbow/entity/index.dart';
 
 class ControlPanel extends ConsumerWidget {
   const ControlPanel({super.key});

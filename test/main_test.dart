@@ -2,7 +2,7 @@
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:smt/data/index.dart';
+import 'package:rainbow/data/index.dart';
 
 void main() async {
   test('database', () async {

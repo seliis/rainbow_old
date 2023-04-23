@@ -1,7 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 
-import 'package:smt/presenter/index.dart';
+import 'package:rainbow/presenter/index.dart';
 
 class RecoveringSwitch extends ConsumerWidget {
   const RecoveringSwitch({super.key});
