@@ -6,10 +6,10 @@ enum View {
   storeManager,
 }
 
-class AppRouter {
-  static const _instance = AppRouter._singleton();
-  factory AppRouter() => _instance;
-  const AppRouter._singleton();
+class Router {
+  static const _instance = Router._singleton();
+  factory Router() => _instance;
+  const Router._singleton();
 
   static MaterialPageRoute onGeneratedRoute(RouteSettings routeSettings) {
     Widget targetView;

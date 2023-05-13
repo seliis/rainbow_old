@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:rainbow/router/index.dart';
+import 'package:rainbow/router/index.dart' as router;
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -37,7 +37,7 @@ class HomeView extends StatelessWidget {
             makeTextButton('Manage Store', () {
               Navigator.pushNamed(
                 context,
-                View.storeManager.name,
+                router.View.storeManager.name,
               );
             }),
             const SizedBox(
